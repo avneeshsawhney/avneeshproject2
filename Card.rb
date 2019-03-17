@@ -16,12 +16,13 @@ class Deck
 
 
 def initialize 
+@deck = []
 @suits = ['hearts', 'clubs', 'spades', 'diamonds']
 @ranks = [2,3,4,5,6,7,8,9,10, 'jack', 'queen', 'king', 'ace']
 
 @suits.each do |suit|
   @ranks.each do |rank|
-    Card.new << (rank, suit)
+@deck.push(Card.new(rank, suit)) 
 
     end
 
@@ -29,7 +30,7 @@ def initialize
 end
 
 def shuffle
-@cards.shuffle!
+puts @deck.to_s
 end
 
 def deal
@@ -46,9 +47,9 @@ def output
 end
 
 deck = Deck.new
-#deck.shuffle
+deck.shuffle
 #deck.deal
-#deck.output
+#sdeck.output
 
 
 
