@@ -5,5 +5,5 @@ root 'places#index'
 resources :places do
   resources :comments, only: :create
 end
-
+resources :users, only: :show
 end
